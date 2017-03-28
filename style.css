@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Droid+Serif:400,700,400italic|Work+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;;
+  color: rgb(30, 30, 30);
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: rgb(30, 30, 30);
+  font-weight: normal;
+}
+
+h1 a:visited {
+  color: rgb(30, 30, 30);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(0, 0, 238);
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 42px;
+}
+
+section .hello {
+  display: none;
+}
+
+footer {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid rgb(225, 225, 225);
+  text-align: center;
+}
+
+footer ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  padding: 15px 0 0 0;
+}
+
+footer p, footer a, footer a:visited {
+  color: rgb(80, 80, 80);
+}
+
+footer a:hover {
+  color: rgb(0, 0, 0);
+}
+
+@media(min-width: 1024px) {
+  body {
+    max-width: 760px;
+    margin: 40px auto;
+  }
+
+  footer ul li {
+    display: inline-block;
+    padding: 0 15px 0 15px;
+  }
+}
