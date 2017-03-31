@@ -5,13 +5,47 @@ body {
   color: rgb(30, 30, 30);
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 42px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 a {
   color: rgb(30, 30, 30);
   font-weight: normal;
 }
 
 h1 a:visited {
   color: rgb(30, 30, 30);
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+nav li {
+  padding: 15px 0 0 0;
+}
+
+nav a, nav a:visited {
+  color: rgb(80, 80, 80);
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.hello {
+  display: none;
 }
 
 a {
@@ -22,44 +56,12 @@ a:visited {
   color: rgb(0, 0, 238);
 }
 
-header {
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-header h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 42px;
-}
-
-section .hello {
-  display: none;
-}
-
 footer {
   padding-top: 40px;
   margin-top: 40px;
   border-top: 1px solid rgb(225, 225, 225);
   text-align: center;
-}
-
-footer ul {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-footer ul li {
-  padding: 15px 0 0 0;
-}
-
-footer p, footer a, footer a:visited {
   color: rgb(80, 80, 80);
-}
-
-footer a:hover {
-  color: rgb(0, 0, 0);
 }
 
 @media(min-width: 1024px) {
@@ -68,7 +70,7 @@ footer a:hover {
     margin: 40px auto;
   }
 
-  footer ul li {
+  nav ul li {
     display: inline-block;
     padding: 0 15px 0 15px;
   }

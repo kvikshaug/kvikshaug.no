@@ -10,24 +10,11 @@
   </head>
 
   <body>
-    <div class="container">
-      <header>
-        <h1>
-          <a href="/">Ali Kaafarani</a>
-        </h1>
-      </header>
-
-      <section>
-        <img src="hello1.jpeg" alt="Ali Kaafarani" class="hello">
-        <img src="hello2.jpeg" alt="Ali Kaafarani" class="hello">
-        <img src="hello3.jpeg" alt="Ali Kaafarani" class="hello">
-        <img src="hello4.jpeg" alt="Ali Kaafarani" class="hello">
-        <p>
-          Jeg er en <a href="https://github.com/kvikshaug">datanerd</a> og livsnyter. Jeg elsker å stå på <a href="https://vimeo.com/53413403">snowboard</a> og går gjerne fra <a href="https://www.ut.no">hytte til hytte</a> i fjellet. Jeg hører på alt fra klassisk musikk til folkemetall, spiller litt piano, og er over gjennomsnittet glad i å kjøre bil. Jeg synes folk flest stresser for mye og glemmer at <a href="https://www.youtube.com/watch?v=WGoTmNU_5A0">livet er en symfoni</a>.
-        </p>
-      </section>
-
-      <footer>
+    <header>
+      <h1>
+        <a href="/">Ali Kaafarani</a>
+      </h1>
+      <nav>
         <ul>
           <li><a href="https://stackoverflow.com/story/kvikshaug">story</a></li>
           <li><a href="https://github.com/kvikshaug">github</a></li>
@@ -37,11 +24,22 @@
           <li><a href="https://vimeo.com/kvikshaug">vimeo</a></li>
           <li><a href="mailto:ali@kvikshaug.no">email</a></li>
         </ul>
-        <p>
-          Bitcoin: 3PsEQaL4EPxB57hL3JoeqX1pPtxGqJF1h5
-        </p>
-      </footer>
-    </div>
+      </nav>
+    </header>
+
+    <section>
+      <img src="hello1.jpeg" alt="Ali Kaafarani" class="hello">
+      <img src="hello2.jpeg" alt="Ali Kaafarani" class="hello">
+      <img src="hello3.jpeg" alt="Ali Kaafarani" class="hello">
+      <img src="hello4.jpeg" alt="Ali Kaafarani" class="hello">
+      <p>
+        Jeg er en <a href="https://github.com/kvikshaug">datanerd</a> og livsnyter. Jeg elsker å stå på <a href="https://vimeo.com/53413403">snowboard</a> og går gjerne fra <a href="https://www.ut.no">hytte til hytte</a> i fjellet. Jeg hører på alt fra klassisk musikk til folkemetall, spiller litt piano, og er over gjennomsnittet glad i å kjøre bil. Jeg synes folk flest stresser for mye og glemmer at <a href="https://www.youtube.com/watch?v=WGoTmNU_5A0">livet er en symfoni</a>.
+      </p>
+    </section>
+
+    <footer>
+      Bitcoin: 3PsEQaL4EPxB57hL3JoeqX1pPtxGqJF1h5
+    </footer>
     <script>
       var images = document.getElementsByClassName('hello');
       var image = images[new Date().getDate() % images.length];
