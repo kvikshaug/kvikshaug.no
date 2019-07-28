@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Work+Sans:400);
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400|Work+Sans:400";
 
-/* Shared colors */
+// Shared colors
 
 $font-color: rgb(30, 30, 30);
 $font-color-weak: rgb(80, 80, 80);
 
-/* Element defaults */
+// Element defaults
 
 a {
   text-decoration: none;
@@ -15,25 +15,25 @@ img {
   max-width: 100%;
 }
 
-/* Sections */
+// Sections
 
 body {
-  font-family: 'Open Sans', sans-serif;
   color: $font-color;
+  font-family: "Open Sans", sans-serif;
 }
 
 header {
-  margin-top: 20px;
   margin-bottom: 40px;
+  margin-top: 20px;
   text-align: center;
 
   h1 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 42px;
 
     a {
-      font-weight: normal;
       color: inherit;
+      font-weight: normal;
 
       &:visited {
         color: inherit;
@@ -43,21 +43,23 @@ header {
 
   nav {
     ul {
-      padding: 0;
-      margin: 0;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
 
     li {
-      padding: 15px 0 0 0;
+      padding: 15px 0 0;
     }
 
-    a, a:visited {
-      color: $font-color-weak;
-    }
+    a {
+      &:visited {
+        color: $font-color-weak;
+      }
 
-    a:hover {
-      color: rgb(0, 0, 0);
+      &:hover {
+        color: rgb(0, 0, 0);
+      }
     }
   }
 }
@@ -65,15 +67,17 @@ header {
 section {
   margin-bottom: 40px;
 
-  a:visited {
-    color: rgb(0, 0, 238);
+  a {
+    &:visited {
+      color: rgb(0, 0, 238);
+    }
   }
 }
 
 footer {
+  border-top: 1px solid rgb(225, 225, 225);
   color: $font-color-weak;
   padding-top: 40px;
-  border-top: 1px solid rgb(225, 225, 225);
   text-align: center;
 
   p {
@@ -81,7 +85,7 @@ footer {
   }
 }
 
-/* Large screens */
+// Large screens
 
 @media(min-width: 1024px) {
   body {
@@ -89,8 +93,12 @@ footer {
     max-width: 760px;
   }
 
-  nav ul li {
-    display: inline-block;
-    padding: 0 15px 0 15px;
+  nav {
+    ul {
+      li {
+        display: inline-block;
+        padding: 0 15px;
+      }
+    }
   }
 }
