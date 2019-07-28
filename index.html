@@ -4,8 +4,8 @@
     <title>Ali Kaafarani</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico">
   </head>
 
   <body>
@@ -38,14 +38,14 @@
     <footer>
       <p>Bitcoin: 3PsEQaL4EPxB57hL3JoeqX1pPtxGqJF1h5</p>
       <p>Ethereum: 0xebd191d04910af7da24deac51242da00c97c472a</p>
-      <p>PGP: <a href="0030199E.asc">0030199E</a></p>
+      <p>PGP: <a href="assets/0030199E.asc">0030199E</a></p>
     </footer>
 
     <script>
       const images = ["hello1.jpeg", "hello2.jpeg", "hello3.jpeg", "hello4.jpeg", "hello5.jpeg", "hello6.jpeg"];
       const todaysImage = images[(new Date().getDate() % images.length)];
       const image = document.getElementById("profile");
-      image.setAttribute("src", todaysImage);
+      image.setAttribute("src", "assets/" + todaysImage);
 
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
