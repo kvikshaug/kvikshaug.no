@@ -29,12 +29,7 @@
     </header>
 
     <section>
-      <img src="hello1.jpeg" alt="Ali Kaafarani" class="hello">
-      <img src="hello2.jpeg" alt="Ali Kaafarani" class="hello">
-      <img src="hello3.jpeg" alt="Ali Kaafarani" class="hello">
-      <img src="hello4.jpeg" alt="Ali Kaafarani" class="hello">
-      <img src="hello5.jpeg" alt="Ali Kaafarani" class="hello">
-      <img src="hello6.jpeg" alt="Ali Kaafarani" class="hello">
+      <img alt="Ali Kaafarani" id="profile">
       <p>
         Jeg er en <a href="https://github.com/kvikshaug">datanerd</a> og livsnyter. Jeg elsker å stå på <a href="https://vimeo.com/53413403">snowboard</a> og går gjerne fra <a href="https://www.ut.no">hytte til hytte</a> i fjellet. Jeg hører på alt fra klassisk musikk til folkemetall, spiller litt piano, og er over gjennomsnittet glad i å kjøre bil. Jeg synes folk flest stresser for mye og glemmer at <a href="https://www.youtube.com/watch?v=WGoTmNU_5A0">livet er en symfoni</a>.
       </p>
@@ -47,9 +42,10 @@
     </footer>
 
     <script>
-      var images = document.getElementsByClassName('hello');
-      var image = images[new Date().getDate() % images.length];
-      image.style.cssText = "display: block;";
+      const images = ["hello1.jpeg", "hello2.jpeg", "hello3.jpeg", "hello4.jpeg", "hello5.jpeg", "hello6.jpeg"];
+      const todaysImage = images[(new Date().getDate() % images.length)];
+      const image = document.getElementById("profile");
+      image.setAttribute("src", todaysImage);
 
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
