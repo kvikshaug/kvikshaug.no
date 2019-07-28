@@ -20,7 +20,7 @@
     "hex-notation": 2,
     "id-name-format": 2,
     "indentation": 2,
-    "leading-zero": 2,
+    "leading-zero": 0,
     "max-file-line-count": 2,
     "max-line-length": [2, {"length": 88}],
     "mixin-name-format": 2,

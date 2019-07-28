@@ -1,104 +1,54 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400|Work+Sans:400";
-
-// Shared colors
+@import "https://fonts.googleapis.com/css?family=Taviraj|Work+Sans&display=block";
 
 $font-color: rgb(30, 30, 30);
-$font-color-weak: rgb(80, 80, 80);
 
-// Element defaults
+body {
+  color: $font-color;
+  font-family: "Taviraj", serif;
+  font-size: 22px;
+}
 
 a {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  color: $font-color;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:visited {
+    color: $font-color;
+  }
 }
 
 img {
   max-width: 100%;
 }
 
-// Sections
-
-body {
-  color: $font-color;
-  font-family: "Open Sans", sans-serif;
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 42px;
 }
 
-header {
-  margin-bottom: 40px;
-  margin-top: 20px;
-  text-align: center;
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  height: 0;
+  margin: 40px 0;
 
-  h1 {
-    font-family: "Work Sans", sans-serif;
-    font-size: 42px;
-
-    a {
-      color: inherit;
-      font-weight: normal;
-
-      &:visited {
-        color: inherit;
-      }
-    }
-  }
-
-  nav {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      padding: 15px 0 0;
-    }
-
-    a {
-      &:visited {
-        color: $font-color-weak;
-      }
-
-      &:hover {
-        color: rgb(0, 0, 0);
-      }
-    }
-  }
 }
 
-section {
-  margin-bottom: 40px;
+$screen-width: 1024px;
+$margin: 40px;
 
-  a {
-    &:visited {
-      color: rgb(0, 0, 238);
-    }
-  }
-}
-
-footer {
-  border-top: 1px solid rgb(225, 225, 225);
-  color: $font-color-weak;
-  padding-top: 40px;
-  text-align: center;
-
-  p {
-    margin: 0;
-  }
-}
-
-// Large screens
-
-@media(min-width: 1024px) {
+@media(min-width: $screen-width) {
   body {
-    margin: 40px auto;
-    max-width: 760px;
+    margin: $margin;
+    max-width: $screen-width - (2 * $margin);
   }
 
-  nav {
-    ul {
-      li {
-        display: inline-block;
-        padding: 0 15px;
-      }
-    }
+  footer {
+    display: flex;
   }
 }
