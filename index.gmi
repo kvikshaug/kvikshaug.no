@@ -40,7 +40,7 @@ Some of my life-long passions include snowboarding, splitboarding, cross-country
 => https://vimeo.com/53413403 Snowboarding
 => https://kvikshaug.no/assets/splitboard.jpg Splitboarding
 => https://ut.no Mountain Hiking
-=> https://www.goodreads.com/review/list/101218297-ali-kaafarani?shelf=favorites&amp;view=covers Favorite books
+=> https://beta.readng.co/user/kvikshaug/collection/favorites-L1pah Favorite books
 => https://steamcommunity.com/id/kvikshaug Video games
 
 I have a pragmatic approach to software engineering. In my early years, I took great pride in my craft. I saw an intrinsic value in expressing computational logic in various elegant, complex ways that different programming languages offer. However, with time, I came to realize a crucial fact in software development: Code is much harder to read than it is to write. Today, although I still can appreciate the beauty in a well written application, I see software as a means to an end, and value documentation, readability and maintainability - and if a problem can be solved without writing a single line of code, that is often what I will advocate.
