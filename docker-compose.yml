@@ -1,0 +1,15 @@
+services:
+  sass:
+    build: .
+    image: kvikshaug.no
+    volumes:
+      - ".:/app"
+    command: sass --watch -s compressed assets/sass:assets/css
+    stop_signal: SIGKILL
+
+  babel:
+    image: kvikshaug.no
+    volumes:
+      - ".:/app"
+    command: babel --verbose --watch assets/scripts/src -d assets/scripts/dist
+    stop_signal: SIGKILL

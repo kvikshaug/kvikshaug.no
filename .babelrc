@@ -1,0 +1,4 @@
+{
+  "presets": [["/usr/local/lib/node_modules/babel-preset-minify", {"builtIns": false}]],
+  "comments": false
+}
