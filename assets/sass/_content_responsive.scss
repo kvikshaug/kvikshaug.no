@@ -1,0 +1,30 @@
+@media (max-width: 991px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 10px;
+
+    .links {
+      justify-self: center;
+      column-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  header {
+    .links {
+      column-gap: 10px;
+    }
+  }
+
+  .hello {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}

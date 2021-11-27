@@ -1,0 +1,31 @@
+@use "design";
+
+header {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .links {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 25px;
+    justify-self: right;
+  }
+}
+
+.hello {
+  float: right;
+  margin: 0 0 40px 40px;
+  width: 40%;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+
+  code {
+    overflow-wrap: anywhere;
+  }
+}
