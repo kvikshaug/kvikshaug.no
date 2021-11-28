@@ -1,8 +1,10 @@
 services:
   nginx:
     image: nginx:1.21
-    ports:
-      - "8000:80"
+    networks:
+      spittle:
+        aliases:
+          - kvikshaug
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./html:/html:ro
@@ -13,13 +15,15 @@ services:
     image: builder
     volumes:
       - ".:/app"
-    command: sass --watch -s compressed assets/sass:assets/dist/css
-    stop_signal: SIGKILL
+    command: sass -s compressed assets/sass:assets/dist/css
 
   babel:
     build: .
     image: builder
     volumes:
       - ".:/app"
-    command: babel --verbose --watch js -d assets/dist/js
-    stop_signal: SIGKILL
+    command: babel --verbose js -d assets/dist/js
+
+networks:
+  spittle:
+    external: true
