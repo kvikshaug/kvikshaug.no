@@ -1,1 +1,86 @@
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgvH6/zjdjI5xDaqUpReMS5MN52ki9u+d8jI2gNx9wLM4Kp3BheWxvYWTESpcCB8QgvNkLD8i0QvjH1FNXvGrSFFdqXBAZVmKNuKscsxy3QIbEIP7RU3gDWv3kup7GKFsppIkr3yagahe+vCRTrqslio6HAgHCo3NpZ8RAUGAg5Re8cXCHACPIgPmSlW0xPFbmpL8wDBOl7W+N3aZ0TVHZ2+4sDTPyDSSR8QGUTWY9/k/84H+XpMyWffVfCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDoLqwErvLPZeO75l2dpG0h2CzfGcE7b8RyDbmfRCy5so3RhZ80CAqd2ZXJzaW9uAQ==
+==================================================================
+https://keybase.io/kvikshaug
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kvikshaug.no
+  * I am kvikshaug (https://keybase.io/kvikshaug) on keybase.
+  * I have a public key with fingerprint 3624 317D 5BD2 01F8 E93D  9BD1 916A 7833 0030 199E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120bc7ebfce3763239c436aa52945e312e4c379da48bdbbe77c8c8da0371f702cce0a",
+      "fingerprint": "3624317d5bd201f8e93d9bd1916a78330030199e",
+      "host": "keybase.io",
+      "key_id": "916a78330030199e",
+      "kid": "0101b9001580a8c254e150572b5ad00e8f88afea7c48234ae6ecc162b32beff0da700a",
+      "uid": "3e6ff1e7749081557d902c32e2a1eb19",
+      "username": "kvikshaug"
+    },
+    "merkle_root": {
+      "ctime": 1638289370,
+      "hash_meta": "b90321ac5f384a77e7780f3e510d4b465d54dd1343d4f43d9507765fd3962c47",
+      "seqno": 21331824
+    },
+    "revoke": {
+      "sig_ids": [
+        "56b855e6e9a0770d1d0de0ce1fb586d66866d38e97a6ddb4380f8610365e34240f"
+      ]
+    },
+    "service": {
+      "hostname": "kvikshaug.no",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1638289388,
+  "expire_in": 157680000,
+  "prev": "0ec6bfe60bc799733744f54af6a835451223112cc1bf2c9adba12144201abb46",
+  "seqno": 34,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtU3tQVFUYXwiVGF+DSusDlWumIsF53RdGk0moTIWvxpJo59x7zoV1ZXfdXTbQ
+IE1tQqfUKHsoaaGBoWZqS2NpaIkpiaXlUFpipmZqNSmbmbmdy+Q043T/OHfOOb/v
+9/2+3/edFb1ucyTGrZxdjh1g4BtxrecNB317yoj5kuFjFVL2fMnDu358DuPBkMvj
+ZlK2BCAChqlywzI5VhWMsG4SrFAqI53IHEPEiYlVnVGiGcwwuKqamqkxCrAKLRUg
+0+SAShmS5fYW84A/4PaGBC1WEMFQZbLBEICWxnXMdINBHSpU1TAGAAOo61wElviC
+doQQZ9Agz3T7xJnYuLrk/Q/+pm4ADR0AKGuAaiaSCYcykFVkyJQBwDVL06jFqWoS
+DWFCucJNEyrIwMjglgUYVUGX7rIuOswVy4KiOKIDDcqyynRRGkYcUcgNqNvAIA94
+aSm3tYbdnmAJLSuWKjOkUh7wzOGugM8Xst01Q24bAxWsIU3HKhAV0mCJq5SHqAgV
+mjGC1JQtrBGqqiKlBizMZQgYMYgiM5kwBjHBjFhi0WWgqopsMawryCSqEBLkc70+
+KRtBjKGGiJAQ4GGfh9vZg+5iYVxQyi6UZKW5wtBkWVSuU0ECGGSAcWByaBmypjBF
+0RSFYdEblSqMGQQLJZoCAVZE4wkiwJKKKu18gbDb7KK3e3WrB5leu2P+gC/kM31z
+xE1JKOQPZtvWhCr8NvRJbrj+JXEZbi8TkyIiwjwQdPu8wiqBvMU1TcuQeLnfHeAu
+t42QVUUD4rPz8LDdfm4qhsUVe3Z1XcVYJcSSCbUUqmGZyBAhDKEYTmhYyNQpMyhE
+kBAxjNQQNv9nIyZCJy0WnMI7Lw2VBbhUmVQdjxMccYmO1JS0BOVOWFl4JO7q+ZzV
+X958Xd3i7aflSLq9780T58w+sbnDLhZM2N7Y9+f4g0mNvZMv7WpLPtrnG3DZ2dS0
+P7ri1DPWd+MSMwadQN/fuDB9o6fngOFGwKU2fbvkUm16Zl3bkrHHiq4N6P9Q3nH0
++57XDm6M7h9JFknlr7aerAqc6TgbI47J1ZeXvhxMac68viBMF1UlbENje+6rnFrX
+8dIL7zpbGpZ+kZOYNfSBN589emj9i/Urltfu6ayeEWv9ZWHq7lhGY6QoFk6T84eM
+zoumBaf6vi4smPl52vpIzaRx/Y40oe29Ogt2PHqt5tNX5P6OlAc3lOcs2xvte6zp
+ZG6OnF5XiaJDZuyrT97yw/PL/Fmn7mrcfeq+KX/tzN/d40a/Ye+HJh8fgarA4o8+
+S3+qv/THlU3p925beG778Gr3qC0H57c/d/2nMzB/3lbHiZoe6yJJj9xf4Zu048fa
+ga7EvbM6EyemHPDml+Umx0U2LY7eE3vvQtrEw2vmdZxO+6q1eF9uTezjybHhF/Ic
+batWr83qGN8eG2apm9d92GPhVsegtt+Ao6gip5B1f/gJOXBoT/3ZER90Fr21MnJH
+6tN5y9OvOw/vfTyhsaBcipRuGLpzwsUrK+sjVxf5rRPOA3/PnjZywaCev6b2Ph1p
+eGe6c6R3zZYW55ju3epyFjuuVey/NHDtuMFHW2ojAxqmPbaqPS+r+bK2q+R8Q0u7
+I/cTNO3u1prMKs/mc82j/hwzeNaYaOeogvHHXx/9Dw==
+=nl2+
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kvikshaug
+
+==================================================================
