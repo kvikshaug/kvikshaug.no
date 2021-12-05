@@ -1,4 +1,5 @@
 @use "design";
+@use "solarized";
 
 header {
   display: grid;
@@ -11,6 +12,10 @@ header {
     grid-auto-flow: column;
     column-gap: 25px;
     justify-self: right;
+
+    a {
+      color: solarized.$base01;
+    }
   }
 }
 
