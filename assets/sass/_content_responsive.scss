@@ -14,7 +14,29 @@
 @media (max-width: 575px) {
   header {
     .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 10px;
       column-gap: 10px;
+      margin: 20px 0;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // 48px represents a minimum tap target size
+        min-width: 48px;
+        min-height: 48px;
+        text-decoration: none;
+
+        i {
+          // .fa-lg
+          font-size: 1.33333em;
+          line-height: 0.75em;
+          vertical-align: -0.0667em;
+        }
+      }
     }
   }
 
