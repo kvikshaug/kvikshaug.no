@@ -13,13 +13,14 @@
 
 @media (max-width: 575px) {
   header {
+    row-gap: 20px;
+
     .links {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       row-gap: 10px;
       column-gap: 10px;
-      margin: 20px 0;
 
       a {
         display: flex;
@@ -40,10 +41,12 @@
     }
   }
 
-  .hello {
-    float: none;
-    margin: 0;
-    width: 100%;
+  article {
+    .hello {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
   }
 
   footer {
