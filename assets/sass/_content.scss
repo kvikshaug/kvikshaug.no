@@ -1,5 +1,4 @@
 @use "design";
-@use "solarized";
 
 header {
   display: grid;
@@ -13,7 +12,7 @@ header {
     justify-self: right;
 
     a {
-      color: solarized.$base01;
+      color: design.$font-color;
     }
   }
 }

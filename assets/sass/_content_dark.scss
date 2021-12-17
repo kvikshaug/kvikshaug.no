@@ -1,0 +1,11 @@
+@use "design_dark";
+
+@media (prefers-color-scheme: dark) {
+  header {
+    .links {
+      a {
+        color: design_dark.$font-color;
+      }
+    }
+  }
+}
