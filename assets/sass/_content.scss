@@ -28,15 +28,20 @@ article {
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
+  margin-top: 40px;
+  padding-top: 40px;
 
-  code {
-    overflow-wrap: anywhere;
-  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
 
-  .qr {
-    margin-top: 20px;
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    .qr {
+      margin-top: 20px;
+    }
   }
 }

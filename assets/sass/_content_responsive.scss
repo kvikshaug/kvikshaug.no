@@ -50,6 +50,8 @@
   }
 
   footer {
-    grid-template-columns: 1fr;
+    .container {
+      grid-template-columns: 1fr;
+    }
   }
 }

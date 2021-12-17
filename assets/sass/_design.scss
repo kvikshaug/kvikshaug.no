@@ -3,7 +3,6 @@ $link-color: #bf3211;
 
 body {
   margin-top: 60px;
-  margin-bottom: 60px;
   background-color: #f0efd1;
   color: $font-color;
   font-family: "EB Garamond", serif;
@@ -13,7 +12,8 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 60px;
+  padding-left: 60px;
+  padding-right: 60px;
   max-width: 75rem;
 
   &.ruler {
@@ -54,4 +54,19 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   height: 0;
   margin: 40px auto;
+}
+
+footer {
+  padding-bottom: 80px;
+  background-color: #21180d;
+  color: #f9f8cc;
+
+  a,
+  a:visited {
+    color: #cfba58;
+  }
+}
+
+.dark-only {
+  display: none;
 }
