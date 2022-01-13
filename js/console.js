@@ -19,10 +19,11 @@ for (let imag = -1.2; imag <= 1.2; imag += 0.05) {
   output += "\n";
 }
 
-output += "\n%cBy replacing fear of the unknown with curiosity we open ourselves up to an infinite stream of possibility. We can let fear rule our lives or we can become childlike with curiosity, pushing our boundaries, leaping out of our comfort zones, and accepting what life puts before us.\n\n%c- Alan Watts";
+output +=
+  "\n%cScience is not only compatible with spirituality; it is a profound source of spirituality.\n\n%c- Carl Sagan";
 console.log(
   output,
   "display:block;text-align:center;color:#1b1b1b",
   "display:block;margin:0 auto;width:300px;text-align:center;color:#bf3211;",
-  "display:block;margin:0 auto;width:300px;text-align:right;color:#1b1b1b;",
+  "display:block;margin:0 auto;width:300px;text-align:right;color:#1b1b1b;"
 );
