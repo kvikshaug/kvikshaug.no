@@ -2,28 +2,41 @@ services:
   nginx:
     image: nginx:1.21
     networks:
+      default:
       spittle:
         aliases:
           - kvikshaug
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./html:/html:ro
       - ./assets:/assets:ro
       - ./.well-known:/.well-known:ro
 
-  sass:
+  web:
     build: .
-    image: builder
+    image: kvikshaug.no
+    networks:
+      default:
+        aliases:
+          - kvikshaug
     volumes:
       - ".:/app"
-    command: sass -s compressed assets/sass:assets/dist/css
+    environment:
+      - ENVIRONMENT=production
+      - FLASK_SKIP_DOTENV=1
+      - SECRET_KEY=${SECRET_KEY}
+    command: gunicorn -c gunicorn.py kvikshaug.wsgi:app
+
+  sass:
+    image: kvikshaug.no
+    volumes:
+      - ".:/app"
+    command: sass -s compressed assets/sass:assets/css
 
   babel:
-    build: .
-    image: builder
+    image: kvikshaug.no
     volumes:
       - ".:/app"
-    command: babel --verbose js -d assets/dist/js
+    command: babel --verbose js -d assets/js
 
 networks:
   spittle:

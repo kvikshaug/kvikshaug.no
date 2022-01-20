@@ -1,0 +1,16 @@
+# WSGI and Flask core
+gunicorn
+gevent
+flask
+
+# Development (QA, testing, debugger tools)
+flask-debugtoolbar
+pytest
+pytest-cov
+black
+flake8
+flake8-docstrings
+flake8-bugbear
+isort
+safety
+ipython

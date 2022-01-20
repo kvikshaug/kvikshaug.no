@@ -1,1 +1,7 @@
-/assets/dist/
+*.py[cod]
+/.vscode/
+/.coverage
+
+/.env
+/assets/css/
+/assets/js/
