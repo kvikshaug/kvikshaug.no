@@ -1,80 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Ali Kaafarani</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Hey there, I'm Ali, a software engineer from Copenhagen and co-founder of Unseen Bio.">
+{% extends "layout.html" %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=EB+Garamond&amp;display=block">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=EB+Garamond&amp;display=block">
+{% block content %}
+  <article class="container">
+    <section>
+      <img src="assets/images/hello.webp" alt="Irene and me" title="Irene and me" class="hello" width="535" height="588">
+      <p>I am a senior software engineer located in Copenhagen, Denmark. I am a co-founder of <a href="https://unseenbio.com">Unseen Bio</a>, a biotech company specializing in analyzing gut microbiome conditions, bringing users personalized feedback to improve health and wellbeing.</p>
+      <p>As I worked for some years on the <a href="http://dd-decaf.eu/">DD-DeCaF research project</a>, we built a unique tool which brings computer-aided design into the realm of metabolic engineering. In an endeavour to bring our cutting-edge research to industry, we participated in the <a href="https://bioinnovationinstitute.com/news/meet-the-start-ups-metabolizer/">Business Acceleration Academy</a> at the BioInnovation Institute in Copenhagen, resulting in <a href="https://youtu.be/v0OykuR2JbA?t=4127">Metabolyzer</a>, which has since <a href="https://www.linkedin.com/feed/update/urn:li:activity:6648974668948615168/">joined forces with Unseen Bio</a>.</p>
+      <p>Previously, I was part of the <a href="https://www.dnt.no/">Norwegian Trekking Association (DNT)</a>, an organization promoting mountain hiking in the <a href="https://ut.no">majestic Norwegian outdoors</a>. I was a system architect and core contributor to <a href="https://github.com/Turistforeningen">a number of their open source projects</a>.</p>
+      <p>I promote open source and personally run a handful of small side projects. Most of these are published on <a href="https://gitlab.com/kvikshaug">gitlab</a> or <a href="https://github.com/kvikshaug">github</a>, and every so often I participate in Q&amp;A on <a href="https://stackoverflow.com/users/302484/kvikshaug">stack overflow</a>. Other open source projects I have contributed to include <a href="https://github.com/opencobra/cobrapy">cobrapy</a>, and <a href="https://github.com/opencobra/memote">memote</a>, a genome-scale metabolic model test suite <a href="https://www.nature.com/articles/s41587-020-0446-y">published in Nature Biotechnology</a>. A presentation of my humble career in academia is available on <a href="https://orcid.org/0000-0002-2805-310X">ORCID</a>.</p>
+      <p>Although I'm not actively looking for new work at the moment, I am always open to discuss new opportunities. Read my <a href="https://stackoverflow.com/story/kvikshaug">story</a>, connect on <a href="https://www.linkedin.com/in/ali-kaafarani-8723b319/">linkedin</a> or contact me on <a href="mailto:ali@kvikshaug.no">ali@kvikshaug.no</a>.</p>
+    </section>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <hr>
 
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <script src="assets/js/analytics.js" async></script>
-    <script src="assets/js/console.js" async></script>
-  </head>
-
-  <body>
-    <header class="container">
-      <h1>Ali Kaafarani</h1>
-      <div class="links">
-        <a title="E-mail" href="mailto:ali@kvikshaug.no"><i class="fas fa-at"></i></a>
-        <a title="StackOverflow" href="https://stackoverflow.com/story/kvikshaug"><i class="fab fa-stack-overflow"></i></a>
-        <a title="GitLab" href="https://gitlab.com/kvikshaug"><i class="fab fa-gitlab"></i></a>
-        <a title="GitHub" href="https://github.com/kvikshaug"><i class="fab fa-github"></i></a>
-        <a title="Twitter" href="https://twitter.com/kvikshaug"><i class="fab fa-twitter"></i></a>
-        <a title="LinkedIn" href="https://www.linkedin.com/in/ali-kaafarani-8723b319/"><i class="fab fa-linkedin"></i></a>
-        <a title="Vimeo" href="https://vimeo.com/kvikshaug"><i class="fab fa-vimeo"></i></a>
-        <a title="Steam" href="https://steamcommunity.com/id/kvikshaug"><i class="fab fa-steam"></i></a>
-        <a title="Oku library" href="https://oku.club/user/kvikshaug"><i class="fas fa-book"></i></a>
-        <a title="ORCID record" href="https://orcid.org/0000-0002-2805-310X"><i class="fab fa-orcid"></i></a>
-        <a title="Keybase" href="https://keybase.io/kvikshaug"><i class="fab fa-keybase"></i></a>
-        <a title="PGP key" href="assets/0030199E.asc"><i class="fas fa-key"></i></a>
-        <a title="Bitcoin address" href="https://www.blockchain.com/btc/address/3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB"><i class="fab fa-bitcoin"></i></a>
-      </div>
-    </header>
-
-    <article>
-      <section class="container">
-        <img src="assets/images/hello.webp" alt="Irene and me" title="Irene and me" class="hello" width="535" height="588">
-        <p>I am a senior software engineer located in Copenhagen, Denmark. I am a co-founder of <a href="https://unseenbio.com">Unseen Bio</a>, a biotech company specializing in analyzing gut microbiome conditions, bringing users personalized feedback to improve health and wellbeing.</p>
-        <p>As I worked for some years on the <a href="http://dd-decaf.eu/">DD-DeCaF research project</a>, we built a unique tool which brings computer-aided design into the realm of metabolic engineering. In an endeavour to bring our cutting-edge research to industry, we participated in the <a href="https://bioinnovationinstitute.com/news/meet-the-start-ups-metabolizer/">Business Acceleration Academy</a> at the BioInnovation Institute in Copenhagen, resulting in <a href="https://youtu.be/v0OykuR2JbA?t=4127">Metabolyzer</a>, which has since <a href="https://www.linkedin.com/feed/update/urn:li:activity:6648974668948615168/">joined forces with Unseen Bio</a>.</p>
-        <p>Previously, I was part of the <a href="https://www.dnt.no/">Norwegian Trekking Association (DNT)</a>, an organization promoting mountain hiking in the <a href="https://ut.no">majestic Norwegian outdoors</a>. I was a system architect and core contributor to <a href="https://github.com/Turistforeningen">a number of their open source projects</a>.</p>
-        <p>I promote open source and personally run a handful of small side projects. Most of these are published on <a href="https://gitlab.com/kvikshaug">gitlab</a> or <a href="https://github.com/kvikshaug">github</a>, and every so often I participate in Q&amp;A on <a href="https://stackoverflow.com/users/302484/kvikshaug">stack overflow</a>. Other open source projects I have contributed to include <a href="https://github.com/opencobra/cobrapy">cobrapy</a>, and <a href="https://github.com/opencobra/memote">memote</a>, a genome-scale metabolic model test suite <a href="https://www.nature.com/articles/s41587-020-0446-y">published in Nature Biotechnology</a>. A presentation of my humble career in academia is available on <a href="https://orcid.org/0000-0002-2805-310X">ORCID</a>.</p>
-        <p>Although I'm not actively looking for new work at the moment, I am always open to discuss new opportunities. Read my <a href="https://stackoverflow.com/story/kvikshaug">story</a>, connect on <a href="https://www.linkedin.com/in/ali-kaafarani-8723b319/">linkedin</a> or contact me on <a href="mailto:ali@kvikshaug.no">ali@kvikshaug.no</a>.</p>
-      </section>
-
-      <div class="container ruler">
-        <hr>
-      </div>
-
-      <section class="container">
-        <p>Some of my life-long passions include <a href="https://vimeo.com/53413403">snowboarding</a>, <a href="assets/images/splitboard.webp">splitboarding</a>, cross-country skiing and <a href="https://ut.no/">mountain hiking</a>. It's not all outdoors and adrenaline though; I try to make time to read books, and have accumulated a <a href="https://oku.club/user/kvikshaug/collection/favorites-L1pah">short list of favorites</a>. Additionally, I've loved playing <a href="https://steamcommunity.com/id/kvikshaug">video games</a> since I was 5 years old, and at this point, I don't think I will ever outgrow them.</p>
-        <p>I have a pragmatic approach to software engineering. In my early years, I took great pride in my craft. I saw an intrinsic value in expressing computational logic in various elegant, complex ways that different programming languages offer. However, with time, I came to realize a crucial fact in software development: Code is much harder to read than it is to write. Today, although I still can appreciate the beauty in a well written application, I see software as a means to an end, and value documentation, readability and maintainability - and if a problem can be solved without writing a single line of code, that is often what I will advocate.</p>
-      </section>
-
-      <div class="container ruler dark-only">
-        <hr>
-      </div>
-    </article>
-
-    <footer>
-      <div class="container">
-        <div>
-          <p>To get in touch, drop me a line at <a href="mailto:ali@kvikshaug.no">ali@kvikshaug.no</a>, or send me a secure message with <a href="keybase://chat/kvikshaug">keybase</a>.</p>
-          <p>You can find me on IRC with nickname <em title="Today I mostly go by the nickname kvikshaug, but on IRC I'm still known by my earlier nickname murr4y.">murr4y</em> on networks like <a href="http://www.efnet.org/">efnet</a>, <a href="https://libera.chat/">libera</a> and <a href="http://www.slashnet.org/">slashnet</a>.</p>
-          <p>To send me an encrypted message or verify something I signed, use my public PGP key <a href="assets/0030199E.asc">0030199E</a>.</p>
-        </div>
-        <div>
-          <p>Buy me a beer with bitcoins: <code>3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB</code></p>
-          <img class="qr" src="assets/images/bitcoin-qr.png" width="200" height="200" alt="3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB" title="Buy me a beer with bitcoins: 3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB">
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    <section>
+      <p>Some of my life-long passions include <a href="https://vimeo.com/53413403">snowboarding</a>, <a href="assets/images/splitboard.webp">splitboarding</a>, cross-country skiing and <a href="https://ut.no/">mountain hiking</a>. It's not all outdoors and adrenaline though; I try to make time to read books, and have accumulated a <a href="https://oku.club/user/kvikshaug/collection/favorites-L1pah">short list of favorites</a>. Additionally, I've loved playing <a href="https://steamcommunity.com/id/kvikshaug">video games</a> since I was 5 years old, and at this point, I don't think I will ever outgrow them.</p>
+      <p>I have a pragmatic approach to software engineering. In my early years, I took great pride in my craft. I saw an intrinsic value in expressing computational logic in various elegant, complex ways that different programming languages offer. However, with time, I came to realize a crucial fact in software development: Code is much harder to read than it is to write. Today, although I still can appreciate the beauty in a well written application, I see software as a means to an end, and value documentation, readability and maintainability - and if a problem can be solved without writing a single line of code, that is often what I will advocate.</p>
+    </section>
+  </article>
+{% endblock %}
