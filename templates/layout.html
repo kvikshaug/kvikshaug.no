@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=EB+Garamond&amp;display=block">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=EB+Garamond&amp;display=block">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&amp;family=EB+Garamond&amp;display=block">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
@@ -17,44 +17,96 @@
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <script src="assets/js/analytics.js" async></script>
     <script src="assets/js/console.js" async></script>
+    <script src="assets/js/dimension.js" async></script>
   </head>
 
   <body>
     <header class="container">
-      <h1>Ali Kaafarani</h1>
-      <div class="links">
-        <a title="E-mail" href="mailto:ali@kvikshaug.no"><i class="fas fa-at"></i></a>
-        <a title="StackOverflow" href="https://stackoverflow.com/story/kvikshaug"><i class="fab fa-stack-overflow"></i></a>
-        <a title="GitLab" href="https://gitlab.com/kvikshaug"><i class="fab fa-gitlab"></i></a>
-        <a title="GitHub" href="https://github.com/kvikshaug"><i class="fab fa-github"></i></a>
-        <a title="Twitter" href="https://twitter.com/kvikshaug"><i class="fab fa-twitter"></i></a>
-        <a title="LinkedIn" href="https://www.linkedin.com/in/ali-kaafarani-8723b319/"><i class="fab fa-linkedin"></i></a>
-        <a title="Vimeo" href="https://vimeo.com/kvikshaug"><i class="fab fa-vimeo"></i></a>
-        <a title="Steam" href="https://steamcommunity.com/id/kvikshaug"><i class="fab fa-steam"></i></a>
-        <a title="Oku library" href="https://oku.club/user/kvikshaug"><i class="fas fa-book"></i></a>
-        <a title="ORCID record" href="https://orcid.org/0000-0002-2805-310X"><i class="fab fa-orcid"></i></a>
-        <a title="Keybase" href="https://keybase.io/kvikshaug"><i class="fab fa-keybase"></i></a>
-        <a title="PGP key" href="assets/0030199E.asc"><i class="fas fa-key"></i></a>
-        <a title="Bitcoin address" href="https://www.blockchain.com/btc/address/3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB"><i class="fab fa-bitcoin"></i></a>
-      </div>
+      <h1><a href="/">Ali Kaafarani</a></h1>
+      <nav>
+        <ul>
+          <li><a {% if request.path == "/projects" %}class="active"{% endif %} href="/projects">Projects</a></li>
+          <li><a {% if request.path == "/profile" %}class="active"{% endif %} href="/profile">Profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     {% block content %}{% endblock %}
 
-    <hr class="dark-only">
-
-    <footer>
-      <div class="container">
+    <footer id="contact">
+      <div class="container content">
         <div>
-          <p>To get in touch, drop me a line at <a href="mailto:ali@kvikshaug.no">ali@kvikshaug.no</a>, or send me a secure message with <a href="keybase://chat/kvikshaug">keybase</a>.</p>
-          <p>You can find me on IRC with nickname <em title="Today I mostly go by the nickname kvikshaug, but on IRC I'm still known by my earlier nickname murr4y.">murr4y</em> on networks like <a href="http://www.efnet.org/">efnet</a>, <a href="https://libera.chat/">libera</a> and <a href="http://www.slashnet.org/">slashnet</a>.</p>
-          <p>To send me an encrypted message or verify something I signed, use my public PGP key <a href="assets/0030199E.asc">0030199E</a>.</p>
+          <p>To get in touch, drop me a line at <a href="mailto:ali@kvikshaug.no">ali@kvikshaug.no</a>.</p>
+          <p>You can also find me on IRC with nickname <em title="Today I mostly go by the nickname kvikshaug, but on IRC I'm still known by my earlier nickname murr4y.">murr4y</em> on networks like <a href="http://www.efnet.org/">efnet</a>, <a href="https://libera.chat/">libera</a> and <a href="http://www.slashnet.org/">slashnet</a>.</p>
+          <p>To send me an encrypted message or verify something I signed, use my public PGP key <a href="assets/0030199E.asc" title="Full fingerprint: 3624 317D 5BD2 01F8 E93D  9BD1 916A 7833 0030 199E">0030199E</a>.</p>
         </div>
         <div>
           <p>Buy me a beer with bitcoins: <code>3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB</code></p>
           <img class="qr" src="assets/images/bitcoin-qr.png" width="200" height="200" alt="3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB" title="Buy me a beer with bitcoins: 3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB">
         </div>
       </div>
+
+      <div class="container references">
+        <h2>Find me on your favorite platform</h2>
+        <div class="grid">
+          <a class="link" title="sourcehut" href="https://git.sr.ht/~kvikshaug">
+            <svg class="sourcehut" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg>
+            sourcehut
+          </a>
+          <span>Sourcehut is an appealing, minimalistic software development platform, and an interesting alternative to the bigger players.</span>
+          <a class="link" title="GitLab" href="https://gitlab.com/kvikshaug">
+            <i class="fab fa-3x fa-gitlab"></i><br>GitLab
+          </a>
+          <span>GitLab is a serious contender in the DevOps platform space and currently my default choice for new projects.</span>
+          <a class="link" title="GitHub" href="https://github.com/kvikshaug">
+            <i class="fab fa-3x fa-github"></i><br>GitHub
+          </a>
+          <span>I've been part of GitHub's ubiquitous git hosting service since 2009. However, after Microsoft's acquisition in 2018, my feelings about the platform are lukewarm.</span>
+          <a class="link" title="StackOverflow" href="https://stackoverflow.com/story/kvikshaug">
+            <i class="fab fa-3x fa-stack-overflow"></i><br>StackOverflow
+          </a>
+          <span>The definitive Q&amp;A site for developers. Admittedly, I have more Qs than As, but hey, at some point we have enough Jon Skeets.</span>
+          <a class="link" title="Oku" href="https://oku.club/user/kvikshaug">
+            <i class="fas fa-3x fa-book"></i><br>Oku
+          </a>
+          <span>My library—tracking all the books I've read, am currently reading, and would like to read.</span>
+          <a class="link" title="Vimeo" href="https://vimeo.com/kvikshaug">
+            <i class="fab fa-3x fa-vimeo"></i><br>Vimeo
+          </a>
+          <span>I've uploaded a few amateur videos, mostly snowboarding edits.</span>
+          <a class="link" title="Steam" href="https://steamcommunity.com/id/kvikshaug">
+            <i class="fab fa-3x fa-steam"></i><br>Steam
+          </a>
+          <span>Video games are a passion of mine, and are likely to remain so forever.</span>
+          <a class="link" title="Keybase" href="https://keybase.io/kvikshaug">
+            <i class="fab fa-3x fa-keybase"></i><br>Keybase
+          </a>
+          <span>Keybase started out as an interesting platform for encrypted communication. However, my interest has declined after Zoom acquired them in 2020.</span>
+          <a class="link" title="Bitcoin address" href="https://www.blockchain.com/btc/address/3AXRXhryGHZ2hgdc1hTSMd9ewdVKruS9NB">
+            <i class="fab fa-3x fa-bitcoin"></i><br>Bitcoin
+          </a>
+          <span>Bitcoin's current energy consumption is abhorrent. That being said, Satoshi Nakamoto solved a <a href="https://bitcoin.org/bitcoin.pdf">real technological problem</a>, and the idea of a decentralized digital currency is clearly here to stay.</span>
+          <a class="link" title="ORCID" href="https://orcid.org/0000-0002-2805-310X">
+            <i class="fab fa-3x fa-orcid"></i><br>ORCID
+          </a>
+          <span>An overview of my very modest career in academia.</span>
+          <a class="link" title="Twitter" href="https://twitter.com/kvikshaug">
+            <i class="fab fa-3x fa-twitter"></i><br>Twitter
+          </a>
+          <span>I've tweeted almost half a dozen times since I joined the platform in 2012. If I enjoyed the format, I would probably rather look into <a href="https://mastodon.social">Mastodon</a>.</span>
+          <a class="link" title="LinkedIn" href="https://www.linkedin.com/in/ali-kaafarani-8723b319/">
+            <i class="fab fa-3x fa-linkedin"></i><br>LinkedIn
+          </a>
+          <span>Feel free to connect on LinkedIn. I try to keep my profile relatively up to date.</span>
+        </div>
+      </div>
+
+      <div class="container site">
+        <hr>
+        <p>This site's source code is <a href="https://git.sr.ht/~kvikshaug/kvikshaug.no">available on sourcehut</a> and has seen <a href="https://web.archive.org/web/2021*/kvikshaug.no">many interesting iterations</a> through its time.</p>
+      </div>
+
     </footer>
   </body>
 </html>

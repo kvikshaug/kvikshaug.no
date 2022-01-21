@@ -1,47 +1,53 @@
-@use "design";
-
-header {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-
-  .links {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 25px;
-    justify-self: right;
-
-    a {
-      color: design.$font-color;
-    }
-  }
-}
-
-article {
-  margin-top: 40px;
-
+article.home {
   .hello {
     float: right;
-    margin: 0 0 40px 40px;
-    width: 40%;
   }
 }
 
-footer {
-  margin-top: 40px;
-  padding-top: 40px;
+article.projects {
+  section {
+    clear: both;
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    .right {
+      float: right;
+      max-width: 350px;
+      margin: 0 0 60px 20px;
 
-    code {
-      overflow-wrap: anywhere;
+      img {
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+      }
     }
 
-    .qr {
-      margin-top: 20px;
+    .subheader {
+      font-style: italic;
+    }
+  }
+}
+
+article.profile {
+  .cv {
+    display: block;
+    padding: 10px 0;
+    border: 2px dotted rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .keywords {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    margin-top: 30px;
+
+    dl {
+      dt {
+        font-weight: bold;
+      }
+
+      dd {
+        margin-left: 30px;
+      }
     }
   }
 }

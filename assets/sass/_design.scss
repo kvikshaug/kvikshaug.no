@@ -1,5 +1,17 @@
+//
+// Color palette
+//
+
 $font-color: #1b1b1b;
 $link-color: #bf3211;
+
+//
+// Base element definitions
+//
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin-top: 60px;
@@ -9,21 +21,23 @@ body {
   font-size: 24px;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 60px;
-  padding-right: 60px;
-  max-width: 80rem;
-}
-
 h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 42px;
+  font-size: 56px;
   color: $font-color;
 }
 
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 60px;
+}
+
 p {
+  margin-top: 30px;
+}
+
+ul {
   margin-top: 30px;
 }
 
@@ -45,23 +59,21 @@ img {
 }
 
 hr {
+  display: block;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   height: 0;
   margin: 40px auto;
 }
 
-footer {
-  padding-bottom: 80px;
-  background-color: #21180d;
-  color: #f9f8cc;
+//
+// Structure
+//
 
-  a,
-  a:visited {
-    color: #cfba58;
-  }
-}
-
-.dark-only {
-  display: none;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  max-width: 80rem;
 }

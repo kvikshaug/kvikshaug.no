@@ -1,13 +1,25 @@
 @media (max-width: 991px) {
+  //
+  // Base element definitions
+  //
+
+  body {
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  //
+  // Structure
+  //
+
   .container {
     margin-left: 0;
     margin-right: 0;
     padding-left: 20px;
     padding-right: 20px;
     max-width: none;
-  }
-
-  h1 {
-    font-size: 38px;
   }
 }

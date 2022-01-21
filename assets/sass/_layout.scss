@@ -1,0 +1,93 @@
+@use "design";
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+
+  h1 {
+    a,
+    a:visited {
+      color: design.$font-color;
+    }
+  }
+
+  nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      column-gap: 30px;
+      padding-left: 0;
+      margin-top: 0;
+      list-style-type: none;
+
+      a,
+      a:visited {
+        padding: 10px 0;
+        color: design.$font-color;
+        font-weight: bold;
+
+        &.active {
+          border-bottom: 2px solid #21180d;
+        }
+      }
+    }
+  }
+}
+
+article {
+  margin-top: 40px;
+}
+
+footer {
+  clear: both;
+  margin-top: 40px;
+  padding: 40px 0 80px 0;
+  background-color: #21180d;
+  color: #f9f8cc;
+
+  a,
+  a:visited {
+    color: #cfba58;
+  }
+
+  hr {
+    border-top-color: #cfba58;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+
+    code {
+      overflow-wrap: anywhere;
+    }
+
+    .qr {
+      margin-top: 20px;
+    }
+  }
+
+  .references {
+    .grid {
+      display: grid;
+      grid-template-columns: auto 1fr auto 1fr;
+      align-items: center;
+      column-gap: 40px;
+      row-gap: 40px;
+      margin-top: 40px;
+
+      .link {
+        text-align: center;
+
+        .sourcehut {
+          margin: 0 auto;
+          width: 72px;
+          height: 72px;
+          fill: #cfba58;
+        }
+      }
+    }
+  }
+}
