@@ -1,4 +1,32 @@
 //
+// Fonts
+//
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/fonts/eb-garamond-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("/assets/fonts/eb-garamond-latin-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/fonts/eb-garamond-latin-italic.woff2") format("woff2");
+}
+
+//
 // Color palette
 //
 
@@ -17,19 +45,18 @@ body {
   margin-top: 60px;
   background-color: #f0efd1;
   color: $font-color;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", Garamond, Georgia, serif;
   font-size: 24px;
 }
 
 h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 56px;
   color: $font-color;
+  font-size: 56px;
+  font-weight: normal;
 }
 
 h2,
 h3 {
-  font-family: "Cormorant Garamond", serif;
   margin-top: 60px;
 }
 
