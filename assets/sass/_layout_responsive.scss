@@ -21,19 +21,21 @@
     nav {
       ul {
         grid-template-columns: 1fr;
-        row-gap: 5px;
+        row-gap: 8px;
 
         li {
           text-align: center;
 
           a,
           a:visited {
+            $border: 2px;
+            $padding: 20px;
+
             display: block;
-            padding: 0 0 0 20px;
+            padding: 0 $padding 0 $padding;
 
             &.active {
-              $border: 2px;
-              padding-left: 20px - $border;
+              padding-left: $padding - $border;
               border-left: $border solid #21180d;
               border-bottom: none;
             }
