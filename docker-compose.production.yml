@@ -7,9 +7,9 @@ services:
         aliases:
           - kvikshaug
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./assets:/assets:ro
-      - ./.well-known:/.well-known:ro
+      - "./nginx.conf:/etc/nginx/nginx.conf:ro"
+      - "./assets:/assets:ro"
+      - "./.well-known:/.well-known:ro"
 
   web:
     build: .
