@@ -1,23 +1,21 @@
 services:
   nginx:
     image: nginx:1.21
-    networks:
-      default:
-      spittle:
-        aliases:
-          - kvikshaug
     volumes:
       - "./nginx.conf:/etc/nginx/nginx.conf:ro"
       - "./assets:/assets:ro"
       - "./.well-known:/.well-known:ro"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.kvikshaug-static.loadBalancer.server.port=80"
+      - "traefik.http.routers.kvikshaug-static.rule=Host(`kvikshaug.no`) && (PathPrefix(`/assets`) || PathPrefix(`/.well-known`))"
+      - "traefik.http.routers.kvikshaug-static.entryPoints=websecure"
+      - "traefik.http.routers.kvikshaug-static.tls=true"
+      - "traefik.http.routers.kvikshaug-static.tls.certresolver=letsencrypt"
 
   web:
     build: .
     image: kvikshaug.no
-    networks:
-      default:
-        aliases:
-          - kvikshaug
     volumes:
       - ".:/app"
     environment:
@@ -25,6 +23,13 @@ services:
       - FLASK_SKIP_DOTENV=1
       - SECRET_KEY=${SECRET_KEY}
     command: gunicorn -c gunicorn.py kvikshaug.wsgi:app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.kvikshaug.loadBalancer.server.port=8000"
+      - "traefik.http.routers.kvikshaug.rule=Host(`kvikshaug.no`)"
+      - "traefik.http.routers.kvikshaug.entryPoints=websecure"
+      - "traefik.http.routers.kvikshaug.tls=true"
+      - "traefik.http.routers.kvikshaug.tls.certresolver=letsencrypt"
 
   sass:
     image: kvikshaug.no
@@ -37,7 +42,3 @@ services:
     volumes:
       - ".:/app"
     command: babel --verbose js -d assets/js
-
-networks:
-  spittle:
-    external: true
