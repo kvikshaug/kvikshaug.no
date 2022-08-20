@@ -1,4 +1,8 @@
-from flask import Flask, render_template
+from datetime import datetime
+import json
+import os
+
+from flask import Flask, render_template, request, redirect
 from jinja2 import StrictUndefined
 
 from .settings import Configuration
@@ -12,17 +16,34 @@ if app.config["DEBUG"]:
     # Be strict during development; forgiving in production.
     app.jinja_env.undefined = StrictUndefined
 
+# Initialize guestbook if not yet created.
+if not os.path.exists("guestbook.json"):
+    with open("guestbook.json", "w") as file_:
+        json.dump([], file_)
+
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    with open("guestbook.json") as file_:
+        guestbook = json.load(file_)
+    for message in guestbook:
+        message["datetime"] = datetime.strptime(message["datetime"], "%Y-%m-%d %H:%M")
+    guestbook = sorted(guestbook, key=lambda m: m["datetime"], reverse=True)
+    return render_template("layout.html", guestbook=guestbook)
 
 
-@app.route("/projects")
-def projects():
-    return render_template("projects.html")
-
-
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
+@app.route("/guestbook", methods=["POST"])
+def guestbook():
+    message = request.form.get("message", "").strip()
+    if message == "":
+        return redirect("/#guestbook")
+    with open("guestbook.json") as file_:
+        guestbook = json.load(file_)
+    with open("guestbook.json", "w") as file_:
+        guestbook.append({
+            "message": message,
+            "ip": request.remote_addr,
+            "datetime": datetime.now().strftime("%Y-%m-%d %H:%M")
+        })
+        json.dump(guestbook, file_)
+    return redirect("/#guestbook")

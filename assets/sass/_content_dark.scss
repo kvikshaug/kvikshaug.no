@@ -1,9 +1,0 @@
-@use "design_dark";
-
-@media (prefers-color-scheme: dark) {
-  article.profile {
-    .cv {
-      border-color: design_dark.$link-color;
-    }
-  }
-}

@@ -1,5 +1,5 @@
 (function () {
-  const image = document.querySelector("article.home .hello");
+  const image = document.querySelector("img.hello");
   if (image) {
     const threshold = 5;
 

@@ -27,13 +27,6 @@
 }
 
 //
-// Color palette
-//
-
-$font-color: #1b1b1b;
-$link-color: #bf3211;
-
-//
 // Base element definitions
 //
 
@@ -42,26 +35,12 @@ html {
 }
 
 body {
-  margin-top: 60px;
-  background-color: #f0efd1;
-  color: $font-color;
   font-family: "EB Garamond", Garamond, Georgia, serif;
   font-size: 24px;
 }
 
-h1 {
-  color: $font-color;
-  font-size: 56px;
-  font-weight: normal;
-}
-
-h2,
-h3 {
-  margin-top: 60px;
-}
-
 p {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 ul {
@@ -69,28 +48,15 @@ ul {
 }
 
 a {
-  color: $link-color;
   text-decoration: none;
 
   &:hover {
-    opacity: 0.4;
-  }
-
-  &:visited {
-    color: $link-color;
+    opacity: 0.6;
   }
 }
 
 img {
   height: auto;
-}
-
-hr {
-  display: block;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  height: 0;
-  margin: 40px auto;
 }
 
 //
@@ -103,4 +69,46 @@ hr {
   padding-left: 60px;
   padding-right: 60px;
   max-width: 80rem;
+}
+
+//
+// Themes
+//
+
+.theme {
+  &.white-on-black {
+    background-color: black;
+    color: white;
+    a,
+    a:visited {
+      color: #cfba58;
+    }
+  }
+
+  &.black-on-white {
+    background-color: white;
+    color: #1b1b1b;
+    a,
+    a:visited {
+      color: #bf3211;
+    }
+  }
+
+  &.brown-light {
+    background-color: #f0efd1;
+    color: #1b1b1b;
+    a,
+    a:visited {
+      color: #bf3211;
+    }
+  }
+
+  &.brown-dark {
+    background-color: #21180d;
+    color: #f9f8cc;
+    a,
+    a:visited {
+      color: #cfba58;
+    }
+  }
 }
