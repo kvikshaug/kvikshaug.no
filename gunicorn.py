@@ -18,11 +18,12 @@ bind = "0.0.0.0:8000"
 worker_class = "gevent"
 workers = 1
 timeout = 30
-accesslog = "-"
-access_log_format = '''%(t)s "%(r)s" %(s)s %(b)s %(L)s "%(f)s"'''
-
 
 if _config == "production":
     preload_app = True
+    accesslog = "logs/access.log"
+    access_log_format = '''%(t)s %({x-forwarded-for}i)s %(u)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s" %(L)s'''
 else:
     reload = True
+    accesslog = "-"
+    access_log_format = '''%(t)s "%(r)s" %(s)s %(b)s %(L)s'''

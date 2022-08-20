@@ -5,3 +5,4 @@
 /.env
 /assets/css/
 /assets/js/
+/logs/access.log

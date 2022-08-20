@@ -17,7 +17,7 @@ services:
     build: .
     image: kvikshaug.no
     volumes:
-      - ".:/app"
+      - "./logs:/app/logs"
     environment:
       - ENVIRONMENT=production
       - FLASK_SKIP_DOTENV=1
