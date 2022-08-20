@@ -26,5 +26,5 @@ services:
     image: kvikshaug.no
     volumes:
       - ".:/app"
-    command: babel --verbose --watch js -d assets/js
+    command: babel --verbose --watch script -o assets/script/bundle.js
     stop_signal: SIGKILL
