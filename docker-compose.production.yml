@@ -41,4 +41,4 @@ services:
     image: kvikshaug.no
     volumes:
       - ".:/app"
-    command: babel --verbose js -d assets/js
+    command: babel --verbose script -o assets/script/bundle.js
