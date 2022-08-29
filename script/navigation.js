@@ -8,10 +8,12 @@
         rect.bottom >= document.documentElement.clientHeight / 2;
 
       document
-        .querySelector(
+        .querySelectorAll(
           `nav a[href='#${element.getAttribute("data-trigger-nav")}']`
         )
-        .classList.toggle("active", isInViewport);
+        .forEach((element) => {
+          element.classList.toggle("active", isInViewport);
+        });
     });
   };
   document.addEventListener("scroll", handler);
