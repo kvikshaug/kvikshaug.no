@@ -2,6 +2,10 @@
   article {
     padding-left: 80px;
 
+    &:first-of-type {
+      padding-top: 40px;
+    }
+
     &.introduction {
       column-gap: 40px;
 

@@ -26,6 +26,11 @@
       color: #1b1b1b;
     }
   }
+
+  footer {
+    // Add the height of the small-screen navigation bar, approx. 73px
+    padding-bottom: 40px + 73px;
+  }
 }
 
 @media (max-width: 575px) {
