@@ -5,5 +5,5 @@
 /.env
 /assets/css/
 /assets/script/
+/data/guestbook.json
 /logs/access.log
-/guestbook.json

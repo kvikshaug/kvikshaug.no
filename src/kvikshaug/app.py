@@ -17,14 +17,14 @@ if app.config["DEBUG"]:
     app.jinja_env.undefined = StrictUndefined
 
 # Initialize guestbook if not yet created.
-if not os.path.exists("guestbook.json"):
-    with open("guestbook.json", "w") as file_:
+if not os.path.exists("data/guestbook.json"):
+    with open("data/guestbook.json", "w") as file_:
         json.dump([], file_)
 
 
 @app.route("/")
 def home():
-    with open("guestbook.json") as file_:
+    with open("data/guestbook.json") as file_:
         guestbook = json.load(file_)
     for message in guestbook:
         message["datetime"] = datetime.strptime(message["datetime"], "%Y-%m-%d %H:%M")
@@ -37,9 +37,9 @@ def guestbook():
     message = request.form.get("message", "").strip()
     if message == "":
         return redirect("/#guestbook")
-    with open("guestbook.json") as file_:
+    with open("data/guestbook.json") as file_:
         guestbook = json.load(file_)
-    with open("guestbook.json", "w") as file_:
+    with open("data/guestbook.json", "w") as file_:
         guestbook.append({
             "message": message,
             "ip": request.remote_addr,

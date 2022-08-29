@@ -17,6 +17,7 @@ services:
     build: .
     image: kvikshaug.no
     volumes:
+      - "./data:/app/data"
       - "./logs:/app/logs"
     environment:
       - ENVIRONMENT=production
