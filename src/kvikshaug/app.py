@@ -25,7 +25,7 @@ if not os.path.exists("data/guestbook.json"):
 @app.route("/")
 def home():
     with open("data/guestbook.json") as file_:
-        guestbook = json.load(file_)
+        guestbook = [c for c in json.load(file_) if c["published"]]
     for message in guestbook:
         message["datetime"] = datetime.strptime(message["datetime"], "%Y-%m-%d %H:%M")
     guestbook = sorted(guestbook, key=lambda m: m["datetime"], reverse=True)
@@ -40,10 +40,13 @@ def guestbook():
     with open("data/guestbook.json") as file_:
         guestbook = json.load(file_)
     with open("data/guestbook.json", "w") as file_:
-        guestbook.append({
-            "message": message,
-            "ip": request.remote_addr,
-            "datetime": datetime.now().strftime("%Y-%m-%d %H:%M")
-        })
+        guestbook.append(
+            {
+                "message": message,
+                "ip": request.remote_addr,
+                "datetime": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                "published": False,
+            }
+        )
         json.dump(guestbook, file_)
     return redirect("/#guestbook")
