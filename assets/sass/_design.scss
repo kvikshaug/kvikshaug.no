@@ -36,15 +36,13 @@ html {
 
 body {
   font-family: "EB Garamond", Garamond, Georgia, serif;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
-p {
-  margin-top: 40px;
-}
-
-ul {
-  margin-top: 30px;
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 a {
@@ -57,6 +55,14 @@ a {
 
 img {
   height: auto;
+}
+
+hr {
+  height: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 0;
+  border-top: 1px solid black;
 }
 
 //
@@ -75,40 +81,38 @@ img {
 // Themes
 //
 
-.theme {
-  &.white-on-black {
-    background-color: black;
-    color: white;
-    a,
-    a:visited {
-      color: #cfba58;
-    }
+.theme-light {
+  background-color: #fffff8;
+  color: #1b1b1b;
+  a,
+  a:visited {
+    color: #bf3211;
   }
-
-  &.black-on-white {
-    background-color: white;
-    color: #1b1b1b;
-    a,
-    a:visited {
-      color: #bf3211;
-    }
+  hr {
+    border-top-color: #bf3211;
   }
+}
 
-  &.brown-light {
-    background-color: #f0efd1;
-    color: #1b1b1b;
-    a,
-    a:visited {
-      color: #bf3211;
-    }
+.theme-light-accent {
+  background-color: #f0efd1;
+  color: #1b1b1b;
+  a,
+  a:visited {
+    color: #bf3211;
   }
+  hr {
+    border-top-color: #bf3211;
+  }
+}
 
-  &.brown-dark {
-    background-color: #21180d;
-    color: #f9f8cc;
-    a,
-    a:visited {
-      color: #cfba58;
-    }
+.theme-dark {
+  background-color: #21180d;
+  color: #f9f8cc;
+  a,
+  a:visited {
+    color: #cfba58;
+  }
+  hr {
+    border-top-color: #cfba58;
   }
 }

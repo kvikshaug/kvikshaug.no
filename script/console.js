@@ -19,13 +19,5 @@
     }
     output += "\n";
   }
-
-  output +=
-    "\n%cScience is not only compatible with spirituality; it is a profound source of spirituality.\n\n%c- Carl Sagan";
-  console.log(
-    output,
-    "display:block;text-align:center;color:#1b1b1b",
-    "display:block;margin:0 auto;width:300px;text-align:center;color:#bf3211;",
-    "display:block;margin:0 auto;width:300px;text-align:right;color:#1b1b1b;"
-  );
+  console.log(output, "display:block;text-align:center;color:#1b1b1b");
 })();

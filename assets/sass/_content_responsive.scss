@@ -1,107 +1,70 @@
-@media (max-width: 1800px) {
-  article {
-    padding-left: 80px;
+@media (max-width: 991px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding: 3rem 1.5rem;
 
-    &:first-of-type {
-      padding-top: 40px;
-    }
+    .links {
+      gap: 3rem;
+      max-width: auto;
 
-    &.introduction {
-      column-gap: 40px;
+      .link {
+        flex-basis: 135px;
+        font-size: 1.5rem;
 
-      .left {
-        h1 {
-          font-size: 90px;
+        i {
+          font-size: 4rem;
         }
 
-        .text {
-          font-size: 30px;
-
-          p {
-            max-width: none;
-          }
+        .sourcehut {
+          width: 4rem;
+          height: 4rem;
         }
-      }
-      img {
-        justify-self: center;
       }
     }
   }
-}
 
-@media (max-width: 991px) {
-  article {
+  article.quote {
+    grid-template-columns: 1fr;
+    gap: 8rem;
     min-height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 3rem 1.5rem;
 
-    &.introduction {
-      grid-template-columns: 1fr;
-      row-gap: 80px;
+    .cell {
+      max-width: none;
+      justify-self: stretch;
 
-      .left {
-        text-align: left;
-      }
-    }
-
-    &.interests {
-      grid-template-columns: 1fr;
-      row-gap: 60px;
-
-      .left {
-        justify-self: center;
+      &.left {
+        margin: 0 2rem;
       }
 
-      .right {
-        p {
-          max-width: none;
+      blockquote {
+        font-size: 2rem;
+
+        &::before {
+          top: -40px;
+          left: -45px;
+          font-size: 120px;
         }
       }
-    }
 
-    &.projects {
-      .grid {
-        grid-template-columns: 1fr;
-        margin-top: 40px;
-
-        .right {
-          grid-row: 1;
-        }
+      .author {
+        margin-top: 2rem;
       }
     }
+  }
 
-    &.profile {
-      .actions {
-        column-gap: 40px;
-      }
-    }
+  footer {
+    padding: 3rem 0;
   }
 }
 
 @media (max-width: 575px) {
-  article {
-    &.introduction {
-      .left {
-        h1 {
-          font-size: 70px;
-        }
-      }
-    }
-
-    &.interests {
-      .left {
-        .links {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-    }
-
-    &.profile {
-      .keywords {
-        grid-template-columns: 1fr;
-        row-gap: 40px;
-        margin-top: 40px;
-      }
+  footer {
+    .content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
 }

@@ -1,147 +1,103 @@
-article {
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 8rem;
+  padding: 8rem 4rem;
   min-height: 100vh;
-  padding: 80px 80px;
+  font-size: 2rem;
 
-  &.introduction {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 120px;
+  .image {
+    text-align: center;
 
-    .left {
-      justify-self: right;
-      text-align: right;
-
-      h1 {
-        font-size: 120px;
-        font-weight: normal;
-      }
-      .text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 10px;
-        font-size: 40px;
-
-        p {
-          max-width: 800px;
-        }
-      }
-    }
     img {
-      justify-self: left;
+      min-width: 20rem;
     }
   }
 
-  &.interests {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    column-gap: 120px;
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-grow: 1;
+    max-width: 40rem;
 
-    .left {
-      justify-self: right;
+    .link {
       display: flex;
       flex-direction: column;
-      row-gap: 40px;
-
-      h2 {
-        text-align: center;
-      }
-
-      .links {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        row-gap: 40px;
-        column-gap: 40px;
-        max-width: 400px;
-
-        .link {
-          text-align: center;
-          font-weight: bold;
-
-          .sourcehut {
-            margin: 0 auto;
-            width: 48px;
-            height: 48px;
-            fill: #bf3211;
-          }
-        }
-      }
-    }
-
-    .right {
-      justify-self: left;
-
-      p {
-        max-width: 800px;
-      }
-    }
-  }
-
-  &.projects {
-    display: flex;
-    flex-direction: column;
-    row-gap: 80px;
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 350px;
       align-items: center;
-      column-gap: 80px;
+      gap: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      flex-basis: 180px;
 
-      .right {
-        img {
-          max-width: 350px;
-          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
-        }
+      i {
+        font-size: 6rem;
       }
 
-      .subheader {
-        font-style: italic;
+      .sourcehut {
+        width: 6rem;
+        height: 6rem;
+        fill: #bf3211;
       }
     }
   }
+}
 
-  &.profile {
-    .actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
-      column-gap: 80px;
-      margin-bottom: 80px;
+article.quote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 8rem;
 
-      .action {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+  .cell {
+    max-width: 50rem;
+
+    &.left {
+      justify-self: right;
+    }
+
+    &.right {
+      justify-self: left;
+    }
+
+    blockquote {
+      position: relative;
+      font-size: 3rem;
+
+      &::before {
+        position: absolute;
+        z-index: 1;
+        top: -50px;
+        left: -80px;
+        font-size: 200px;
+        line-height: 1;
+        color: #cccccc;
+        opacity: 0.6;
+        content: "“";
       }
     }
 
-    h2 {
-      margin-top: 80px;
+    .author {
+      margin-top: 4rem;
+      text-align: right;
     }
+  }
+}
 
-    .keywords {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 30px;
-      row-gap: 30px;
+footer {
+  padding: 8rem 0;
 
-      margin-top: 30px;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
 
-      dl {
-        dt {
-          font-weight: bold;
-        }
-
-        dd {
-          margin-left: 30px;
-        }
-      }
+    code {
+      overflow-wrap: anywhere;
     }
   }
 }
