@@ -1,0 +1,21 @@
+@use "fonts";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 40px;
+}
+
+h1 {
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
